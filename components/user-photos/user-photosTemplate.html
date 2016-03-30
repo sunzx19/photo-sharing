@@ -1,0 +1,27 @@
+<md-card>
+	<md-card-header>
+		{{ph.title}}
+	</md-card-header>
+	<md-card-content ng-repeat="photo in ph.photoOfUser" ng-if="ph.exist">
+		
+		<div><img ng-src='images/{{photo.file_name}}'></div>
+		<button ng-disabled="ph.disabled[photo.id]" type="button" ng-click="ph.favorite(photo)">Favorite!</button>
+		<p> Creation time: {{photo.date_time}} </p>
+		<p> Comments:<p></p>
+		<div ng-repeat="comment in photo.comments">
+			<div> <a href="#/users/{{comment.user_id}}">{{comment.user.first_name}} {{comment.user.last_name}}:</a></div>
+			<div> {{comment.comment}}</div>
+			<div> {{comment.date_time}}</div>
+			<p></p>
+		</div>
+		<div>
+
+			<input type='text' ng-model='ph.newComment' placeholder="Add new comment here...">
+
+		</div>
+		<div><button ng-click='ph.addComment(photo)' type='button'>Add</button></div>
+		</p>
+
+
+	</md-card-content>
+</md-card>

@@ -1,0 +1,19 @@
+<div>
+    <p>Search results for keywords "{{main.key}}":</p>
+    <div ng-repeat="photo in sr.photos">
+        <div>
+            <a ng-href="#/photos/{{photo.user.id}}" ng-click="sr.click()">
+                <img ng-src='images/{{photo.file_name}}' style="width:150px;height:150px;">
+            </a>
+        </div>
+        <p> Photo's owner: {{photo.user.first_name}} {{photo.user.last_name}}</p>
+        <p> Creation time: {{photo.date_time}} </p>
+        <p> Comments found:<p></p>
+        <div ng-repeat="comment in photo.comments">
+            <div> <a href="#/users/{{comment.user_id}}">{{comment.user.first_name}} {{comment.user.last_name}}:</a></div>
+            <div> {{comment.comment}}</div>
+            <div> {{comment.date_time}}</div>
+            <p></p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<div>
+	<div>
+		<div >  
+	      	<h3>Login:</h3>  
+	    </div> 
+	    <div >  
+			<label>User name:</label>  
+			<div>  
+				<input type="text" ng-model="login.username">  
+			</div>  
+	    </div>
+	    <div>  
+			<label>Password:</label>  
+			<div>  
+				<input type="password" ng-model="login.password">  
+			</div>  
+	    </div>
+	    <div>
+	    	<button type="button" ng-click="login.submit()">Sign in</button> 
+	    </div>
+    </div>
+
+    <div ng-if='login.wannaReg'>
+    	<h3>Register:</h3>
+    	<label>Login name:</label>  
+		<div>  
+			<input type="text" ng-model="reg.login_name">  
+		</div>
+		<label>Password:</label>  
+		<div>  
+			<input type="password" ng-model="reg.password">  
+		</div>
+		<label>Re-enter password:</label>  
+		<div>  
+			<input type="password" ng-model="reg.password_re">  
+		</div>  
+		<label>First name:</label>  
+		<div>  
+			<input type="text" ng-model="reg.first_name">  
+		</div>
+		<label>Last name:</label>  
+		<div>  
+			<input type="text" ng-model="reg.last_name">  
+		</div>  
+		<label>Location:</label>  
+		<div>  
+			<input type="text" ng-model="reg.location">  
+		</div>  
+		<label>Description:</label>  
+		<div>  
+			<input type="text" ng-model="reg.description">  
+		</div>  
+		<label>Occupation:</label>  
+		<div>  
+			<input type="text" ng-model="reg.occupation">  
+		</div>
+		<div>
+			<button type="button" ng-click="reg.register()">Register Me</button> 
+		</div>        
+    </div>
+
+    <div ng-if='!login.wannaReg'>
+    	<button type="button" ng-click="reg.wannaRegister()">Register a new user</button>
+    </div>    
+</div>

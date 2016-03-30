@@ -1,0 +1,26 @@
+<md-card>
+	<md-card-header>
+		{{dt.userDetail.first_name}} {{dt.userDetail.last_name}}
+
+	</md-card-header>
+	<md-card-title>
+		<a href="#/photos/{{dt.userDetail.id}}"> Show his/her photos!</a>
+	</md-card-title>
+	<md-card-content> Information: </md-card-content>
+	<md-card-content ng-repeat="(key,value) in dt.userDetail">
+		{{key}}: {{value}}
+	</md-card-content>
+	<md-card-content> Most recent uploaded photo: </md-card-content>
+	<md-card-content>
+		<a ng-href="/images/{{dt.recent.file_name}}" data-lightbox="image-1" data-title="{{dt.recent.date_time}}">
+			<img ng-src="/images/{{dt.recent.file_name}}"  style="width:150px;height:150px"></img>
+		</a>
+	</md-card-content>
+	<md-card-content> Most commented photo: </md-card-content>
+	<md-card-content>
+		<a ng-href="/images/{{dt.most.file_name}}" data-lightbox="image-1" data-title="{{dt.most.date_time}}">
+			<img ng-src="/images/{{dt.most.file_name}}"  style="width:150px;height:150px"></img>
+		</a>
+	</md-card-content>
+
+</md-card>

@@ -1,0 +1,12 @@
+<div>
+    <md-list>
+        Your favorite photos:
+        <md-list-item ng-repeat="item in fav.photos">
+            <a ng-href="/images/{{item.file_name}}" data-lightbox="image-1" data-title="{{item.date_time}}">
+                <img ng-src="/images/{{item.file_name}}"  style="width:150px;height:150px"></img>
+            </a>
+            <button type="button" ng-click="fav.delete(item)">Delete this photo from my favorite</button>
+        </md-list-item>
+    </md-list>
+
+</div>
