@@ -1,2 +1,6 @@
-Open terminal. Input: node webServer.js
+Open terminal. Input: mongod
+Open another terminal. Input: node loadDatabase.js , then node webServer.js
 Open browser. Input:  http://localhost:3000/photo-share.html
+
+The default usernames are: malcolm, ripley, took, kenobi, ludgate, ousterhout
+The default password is: weak
